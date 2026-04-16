@@ -275,6 +275,83 @@ html,body{
 .whr:last-child{border-bottom:none}
 .pfsec{font-family:var(--mono);font-size:8px;letter-spacing:4px;color:rgba(103,186,244,.38);padding:14px 0 6px}
 
+/* LOG */
+.log-hdr{padding:12px 16px;border-bottom:1px solid var(--ln2);background:linear-gradient(135deg,rgba(30,70,107,.3),rgba(8,8,15,.7))}
+.log-hdr-row{display:flex;align-items:center;justify-content:space-between}
+.log-title{font-size:18px;font-weight:600;letter-spacing:3px;color:var(--white)}
+.log-sub{font-family:var(--mono);font-size:9px;color:rgba(103,186,244,.38);margin-top:3px;letter-spacing:1px}
+.log-form{padding:14px 16px;border-bottom:1px solid var(--ln);background:linear-gradient(135deg,rgba(5,5,8,.9),rgba(8,8,15,.98))}
+.lf-label{font-family:var(--mono);font-size:8px;letter-spacing:3px;color:rgba(103,186,244,.4);margin-bottom:6px;display:block}
+.lf-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.lf-chip{
+  padding:7px 14px;border:1px solid var(--ln2);background:none;
+  color:rgba(250,250,250,.4);font-family:var(--mono);font-size:9px;letter-spacing:1px;
+  cursor:pointer;transition:.12s;touch-action:manipulation;
+}
+.lf-chip.sel{border-color:var(--blue-lt);color:var(--blue-lt);background:rgba(103,186,244,.1)}
+.lf-row{display:flex;gap:8px;margin-bottom:14px}
+.lf-inp{
+  flex:1;background:rgba(8,8,15,.8);border:1px solid var(--ln2);
+  color:var(--white);font-family:var(--mono);font-size:15px;
+  padding:11px 12px;outline:none;-webkit-appearance:none;border-radius:0;
+}
+.lf-inp:focus{border-color:var(--blue-lt)}
+.lf-textarea{
+  width:100%;background:rgba(8,8,15,.8);border:1px solid var(--ln2);
+  color:var(--white);font-family:var(--sans);font-size:14px;font-weight:300;
+  padding:11px 12px;outline:none;resize:none;height:72px;
+  -webkit-appearance:none;border-radius:0;line-height:1.5;
+  margin-bottom:14px;
+}
+.lf-textarea:focus{border-color:var(--blue-lt)}
+.lf-btn{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--blue),var(--blue-br));
+  border:none;color:var(--white);
+  font-family:var(--mono);font-size:11px;letter-spacing:4px;
+  cursor:pointer;min-height:50px;touch-action:manipulation;
+  -webkit-appearance:none;
+}
+.lf-btn:active{opacity:.8}
+.log-entries{padding:0}
+.le{padding:13px 16px;border-bottom:1px solid var(--ln);background:linear-gradient(135deg,rgba(5,5,8,.8),rgba(8,8,15,.96))}
+.le-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
+.le-skill{font-family:var(--mono);font-size:8px;letter-spacing:2px;padding:2px 8px;border:1px solid}
+.le-xp{font-family:var(--mono);font-size:9px;color:var(--amber)}
+.le-time{font-family:var(--mono);font-size:9px;color:rgba(103,186,244,.4);margin-bottom:4px}
+.le-result{font-size:13px;font-weight:300;color:var(--wd);line-height:1.5}
+.le-date{font-family:var(--mono);font-size:8px;color:rgba(103,186,244,.25);margin-top:4px}
+
+/* BOSS MODAL */
+.bmodal{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(0,0,0,.85);
+  display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.bmodal-box{
+  width:100%;max-width:430px;
+  background:linear-gradient(180deg,#0a1628,#000);
+  border:1px solid var(--ln2);border-bottom:none;
+  padding:20px 18px 28px;
+  position:relative;
+}
+.bmodal-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue-lt),transparent)}
+.bm-close{position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(103,186,244,.4);font-size:20px;cursor:pointer;padding:4px 8px;touch-action:manipulation}
+.bm-tag{font-family:var(--mono);font-size:8px;letter-spacing:4px;color:var(--blue-gw);margin-bottom:8px}
+.bm-name{font-size:22px;font-weight:700;letter-spacing:3px;color:var(--white);margin-bottom:6px}
+.bm-desc{font-size:13px;font-weight:300;color:var(--wd);line-height:1.6;margin-bottom:16px}
+.bm-rewards{background:rgba(103,186,244,.06);border:1px solid var(--ln2);padding:12px 14px;margin-bottom:16px}
+.bm-rw-title{font-family:var(--mono);font-size:8px;letter-spacing:3px;color:rgba(103,186,244,.4);margin-bottom:10px}
+.bm-rw-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--ln)}
+.bm-rw-row:last-child{border-bottom:none}
+.bm-rw-label{font-family:var(--mono);font-size:10px;color:var(--wd)}
+.bm-rw-val{font-family:var(--mono);font-size:11px;color:var(--amber);font-weight:700}
+.bm-prog-label{font-family:var(--mono);font-size:8px;letter-spacing:3px;color:rgba(103,186,244,.4);margin-bottom:6px}
+.bm-bar{height:4px;background:rgba(103,186,244,.1);margin-bottom:6px}
+.bm-bf{height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-lt));transition:width .7s}
+.bm-prog-meta{font-family:var(--mono);font-size:10px;color:rgba(103,186,244,.5);text-align:right}
+
 /* TOAST */
 .toast{
   position:fixed;bottom:calc(72px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);
@@ -341,8 +418,8 @@ html,body{
       <div id="d-sk"></div>
     </div>
 
-    <div class="boss">
-      <div class="b-tag">BOSS SEMANAL</div>
+    <div class="boss" onclick="openBossModal()" style="cursor:pointer">
+      <div class="b-tag">BOSS SEMANAL <span style="color:rgba(103,186,244,.35);margin-left:6px">↗ VER DETALHES</span></div>
       <div class="b-name" id="bs-nm">—</div>
       <div class="b-desc" id="bs-dc"></div>
       <div class="bbw"><div class="bbf" id="bs-hp" style="width:0%"></div></div>
@@ -385,12 +462,58 @@ html,body{
     </div>
   </div>
 
+  <!-- LOG -->
+  <div class="content hidden" id="tab-log">
+    <div class="log-hdr">
+      <div class="log-hdr-row">
+        <div class="log-title">LOG</div>
+        <div style="font-family:var(--mono);font-size:9px;color:var(--amber)" id="log-xp-today">+0 XP hoje</div>
+      </div>
+      <div class="log-sub">REGISTRE ATIVIDADES EXTRAS DO DIA</div>
+    </div>
+    <div class="log-form">
+      <label class="lf-label">ÁREA</label>
+      <div class="lf-chips" id="lf-chips"></div>
+      <label class="lf-label">TEMPO DE FOCO (MINUTOS)</label>
+      <div class="lf-row">
+        <input class="lf-inp" id="lf-min" type="number" placeholder="ex: 45" min="1" max="480" inputmode="numeric">
+      </div>
+      <label class="lf-label">RESULTADO IMEDIATO (OPCIONAL)</label>
+      <textarea class="lf-textarea" id="lf-result" placeholder="O que você produziu, aprendeu ou alcançou?"></textarea>
+      <button class="lf-btn" onclick="addLog()">REGISTRAR ATIVIDADE</button>
+    </div>
+    <div class="log-entries" id="log-entries"></div>
+  </div>
+
+  <!-- BOSS MODAL -->
+  <div class="bmodal hidden" id="boss-modal" onclick="closeBossModal(event)">
+    <div class="bmodal-box">
+      <button class="bm-close" onclick="closeBossModal()">✕</button>
+      <div class="bm-tag">BOSS SEMANAL</div>
+      <div class="bm-name" id="bm-name">—</div>
+      <div class="bm-desc" id="bm-desc"></div>
+      <div class="bm-rewards">
+        <div class="bm-rw-title">RECOMPENSAS</div>
+        <div class="bm-rw-row"><span class="bm-rw-label">Por tarefa concluída</span><span class="bm-rw-val">+15 XP</span></div>
+        <div class="bm-rw-row"><span class="bm-rw-label">Boss derrotado (100%)</span><span class="bm-rw-val" id="bm-bonus">+50 XP</span></div>
+        <div class="bm-rw-row"><span class="bm-rw-label">Skill bônus</span><span class="bm-rw-val" id="bm-skill-bonus">+2 níveis</span></div>
+        <div class="bm-rw-row"><span class="bm-rw-label">XP já ganho nesta semana</span><span class="bm-rw-val" id="bm-xp-done">0 XP</span></div>
+      </div>
+      <div class="bm-prog-label">PROGRESSO</div>
+      <div class="bm-bar"><div class="bm-bf" id="bm-bar" style="width:0%"></div></div>
+      <div class="bm-prog-meta" id="bm-meta">0 / 0 tarefas</div>
+    </div>
+  </div>
+
   <nav class="nav">
     <button class="nb active" onclick="go('dashboard',this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>DASH
     </button>
     <button class="nb" onclick="go('quests',this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>QUESTS
+    </button>
+    <button class="nb" onclick="go('log',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>LOG
     </button>
     <button class="nb" onclick="go('calendar',this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>CAL
@@ -483,10 +606,11 @@ const RANKS=[
 ];
 
 const BOSSES=[
-  {name:'SEMANA DO GUERREIRO',   desc:'Complete todos os treinos físicos da semana.',           skill:'fisico', target:5},
-  {name:'EMPREENDEDOR EM CHAMAS',desc:'Avance em pelo menos 4 ações de renda esta semana.',     skill:'renda',  target:4},
-  {name:'MENTE AFIADA',          desc:'Complete as sessões de inglês todos os dias da semana.', skill:'ingles', target:7},
-  {name:'MARATONA DA FÉ',        desc:'Complete todas as leituras e orações da semana.',        skill:'biblia', target:7},
+  {name:'SEMANA DO GUERREIRO',   desc:'Complete todos os treinos físicos da semana sem falhar nenhum dia. Foco total no corpo.',    skill:'fisico',  target:5, bonus:50},
+  {name:'CORREDOR IMPLACÁVEL',   desc:'Complete todas as sessões de corrida desta semana. Velocidade e consistência acima de tudo.',skill:'corrida', target:2, bonus:30},
+  {name:'MENTE AFIADA',          desc:'Complete as sessões de inglês todos os dias da semana. Imersão total no idioma.',           skill:'ingles',  target:7, bonus:60},
+  {name:'MARATONA DA FÉ',        desc:'Complete todas as leituras bíblicas e orações da semana. Alimentando o espírito.',          skill:'biblia',  target:7, bonus:60},
+  {name:'DEVORA-LIVROS',         desc:'Complete todas as sessões de leitura da semana. Conhecimento é poder.',                    skill:'leitura', target:5, bonus:40},
 ];
 
 function pad(n){return String(n).padStart(2,'0')}
@@ -511,10 +635,22 @@ function defaultState(){
     level:1,xp:0,totalXp:0,streak:0,totalDays:0,
     skills:{fisico:0,corrida:0,renda:0,ingles:0,biblia:0,leitura:0},
     skillXp:{fisico:0,corrida:0,renda:0,ingles:0,biblia:0,leitura:0},
-    days:{},weekBoss:mkBoss(),
+    days:{},weekBoss:mkBoss(),logs:[],
   };
 }
-function mkBoss(){const b=BOSSES[Math.floor(Math.random()*BOSSES.length)];return{...b,done:0}}
+function mkBoss(){
+  // Rotate boss by ISO week number so each week has a different boss
+  const now=new Date();
+  const weekNum=Math.floor((now-new Date(now.getFullYear(),0,1))/(7*24*60*60*1000));
+  const b=BOSSES[weekNum%BOSSES.length];
+  return{...b,done:0,weekStarted:getWeekKey()};
+}
+function getWeekKey(){
+  const d=new Date();
+  const jan1=new Date(d.getFullYear(),0,1);
+  const wk=Math.floor((d-jan1)/(7*24*60*60*1000));
+  return d.getFullYear()+'-W'+wk;
+}
 
 let S={};
 function load(){
@@ -526,6 +662,17 @@ function save(){localStorage.setItem('pls5',JSON.stringify(S))}
 
 function ensureToday(){
   const t=today();
+  // Rotate boss weekly
+  const wk=getWeekKey();
+  if(!S.weekBoss||S.weekBoss.weekStarted!==wk){
+    // Check if last boss was completed → give bonus XP
+    if(S.weekBoss&&S.weekBoss.done>=S.weekBoss.target&&!S.weekBoss.bonusGiven){
+      S.xp+=(S.weekBoss.bonus||50);S.totalXp+=(S.weekBoss.bonus||50);
+      while(S.xp>=100){S.xp-=100;S.level++;}
+      S.weekBoss.bonusGiven=true;
+    }
+    S.weekBoss=mkBoss();
+  }
   if(!S.days[t]){
     S.days[t]={quests:makeQuests(t),closed:false,xpEarned:0};
   } else if(!S.days[t].closed){
@@ -591,7 +738,24 @@ function renderBoss(){
   document.getElementById('bs-nm').textContent=b.name;
   document.getElementById('bs-dc').textContent=b.desc;
   document.getElementById('bs-hp').style.width=pct+'%';
-  document.getElementById('bs-mt').textContent=b.done+' / '+b.target+' CONCLUÍDAS';
+  const xpDone=b.done*15;
+  document.getElementById('bs-mt').textContent=b.done+' / '+b.target+' · '+xpDone+' XP ganhos';
+}
+function openBossModal(){
+  if(!S.weekBoss)return;
+  const b=S.weekBoss,pct=Math.round((b.done/b.target)*100);
+  document.getElementById('bm-name').textContent=b.name;
+  document.getElementById('bm-desc').textContent=b.desc;
+  document.getElementById('bm-bonus').textContent='+'+(b.bonus||50)+' XP';
+  document.getElementById('bm-skill-bonus').textContent='+2 níveis na skill';
+  document.getElementById('bm-xp-done').textContent=(b.done*15)+' XP';
+  document.getElementById('bm-bar').style.width=pct+'%';
+  document.getElementById('bm-meta').textContent=b.done+' / '+b.target+' tarefas concluídas';
+  document.getElementById('boss-modal').classList.remove('hidden');
+}
+function closeBossModal(e){
+  if(!e||e.target===document.getElementById('boss-modal')||e.target.classList.contains('bm-close'))
+    document.getElementById('boss-modal').classList.add('hidden');
 }
 
 /* QUESTS */
@@ -726,14 +890,106 @@ function saveProfile(){
 
 /* NAV */
 function go(name,btn){
-  ['dashboard','quests','calendar','profile'].forEach(t=>document.getElementById('tab-'+t).classList.toggle('hidden',t!==name));
+  ['dashboard','quests','log','calendar','profile'].forEach(t=>document.getElementById('tab-'+t).classList.toggle('hidden',t!==name));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   if(name==='quests')renderQuests();
   if(name==='calendar')renderCalendar();
   if(name==='profile')renderProfile();
   if(name==='dashboard')renderDash();
+  if(name==='log')renderLog();
 }
+/* LOG FUNCTIONS */
+let selectedLogSkill = null;
+
+function renderLog(){
+  if(!S.logs)S.logs=[];
+  // Render skill chips
+  const chips = document.getElementById('lf-chips');
+  chips.innerHTML = SKILLS.map(s=>
+    `<button class="lf-chip ${selectedLogSkill===s.id?'sel':''}"
+      style="${selectedLogSkill===s.id?'border-color:'+s.color+';color:'+s.color+';background:'+s.color+'18':''}"
+      onclick="selectLogSkill('${s.id}')">${s.icon} ${s.name}</button>`
+  ).join('');
+
+  // XP today from logs
+  const t=today();
+  const xpToday=(S.logs||[]).filter(l=>l.date===t).reduce((a,l)=>a+l.xp,0);
+  document.getElementById('log-xp-today').textContent='+'+xpToday+' XP hoje via log';
+
+  // Render entries
+  const el=document.getElementById('log-entries');
+  const logs=[...(S.logs||[])].reverse();
+  if(!logs.length){
+    el.innerHTML='<div class="empty-st">NENHUMA ATIVIDADE<br>REGISTRADA AINDA</div>';return;
+  }
+  el.innerHTML=logs.map(l=>{
+    const sk=SKILLS.find(s=>s.id===l.skill)||{name:l.skill,color:'#67BAF4',icon:'▣'};
+    return`<div class="le">
+      <div class="le-top">
+        <span class="le-skill" style="color:${sk.color};border-color:${sk.color}55;background:${sk.color}11">${sk.icon} ${sk.name}</span>
+        <span class="le-xp">+${l.xp} XP</span>
+      </div>
+      <div class="le-time">${l.minutes} MIN DE FOCO</div>
+      ${l.result?`<div class="le-result">${l.result}</div>`:''}
+      <div class="le-date">${l.date} ${l.time}</div>
+    </div>`;
+  }).join('');
+}
+
+function selectLogSkill(id){
+  selectedLogSkill = selectedLogSkill===id ? null : id;
+  renderLog();
+}
+
+function calcLogXp(skill, minutes){
+  // XP based on time: 1 XP per 3 min, min 5, max 40
+  // Multiplier by skill intensity
+  const mult = {fisico:1.4, corrida:1.3, ingles:1.1, biblia:1.0, leitura:1.0, renda:1.2};
+  const base = Math.min(40, Math.max(5, Math.floor(minutes/3)));
+  return Math.round(base * (mult[skill]||1));
+}
+
+function addLog(){
+  if(!selectedLogSkill){toast('SELECIONE UMA ÁREA');return;}
+  const minVal=document.getElementById('lf-min').value;
+  const minutes=parseInt(minVal);
+  if(!minutes||minutes<1){toast('INFORME O TEMPO');return;}
+  const result=document.getElementById('lf-result').value.trim();
+
+  const xp=calcLogXp(selectedLogSkill,minutes);
+  const now=new Date();
+  const timeStr=pad(now.getHours())+':'+pad(now.getMinutes());
+
+  const entry={
+    skill:selectedLogSkill,minutes,result,xp,
+    date:today(),time:timeStr,
+    id:Date.now()
+  };
+
+  if(!S.logs)S.logs=[];
+  S.logs.push(entry);
+
+  // Apply XP
+  S.xp+=xp;S.totalXp+=xp;
+  S.skillXp[selectedLogSkill]=(S.skillXp[selectedLogSkill]||0)+xp;
+  while(S.xp>=100){S.xp-=100;S.level++;}
+  S.skills[selectedLogSkill]=Math.floor((S.skillXp[selectedLogSkill]||0)/100);
+
+  // Update boss if skill matches
+  if(S.weekBoss&&S.weekBoss.skill===selectedLogSkill&&minutes>=20){
+    S.weekBoss.done=Math.min(S.weekBoss.done+1,S.weekBoss.target);
+  }
+
+  // Reset form
+  document.getElementById('lf-min').value='';
+  document.getElementById('lf-result').value='';
+  selectedLogSkill=null;
+
+  save();renderLog();renderDash();
+  toast('+'+xp+' XP — LOG REGISTRADO');
+}
+
 function toast(msg){
   const el=document.getElementById('toast');
   el.textContent=msg;el.classList.add('show');
@@ -755,60 +1011,79 @@ load();renderDash();
 
 /* ── PWA ICON & MANIFEST ── */
 (function(){
-  // Draw icon on canvas
+  // Draw evolution icon — upward arrow / ascending chart — minimalist black + #67BAF4
   const sz = 512;
   const cv = document.createElement('canvas');
   cv.width = cv.height = sz;
   const ctx = cv.getContext('2d');
 
-  // Background: black to blue gradient
-  const grad = ctx.createLinearGradient(0,0,sz,sz);
-  grad.addColorStop(0,'#0a1628');
-  grad.addColorStop(1,'#000000');
-  ctx.fillStyle = grad;
+  // Pure black background
+  ctx.fillStyle = '#000000';
   ctx.fillRect(0,0,sz,sz);
 
-  // Blue glow top
-  const glow = ctx.createRadialGradient(sz/2,0,0,sz/2,0,sz*.7);
-  glow.addColorStop(0,'rgba(30,70,107,.6)');
+  // Very subtle blue radial glow center
+  const glow = ctx.createRadialGradient(sz/2,sz/2,0,sz/2,sz/2,sz*.55);
+  glow.addColorStop(0,'rgba(103,186,244,.07)');
   glow.addColorStop(1,'rgba(0,0,0,0)');
   ctx.fillStyle = glow;
   ctx.fillRect(0,0,sz,sz);
 
-  // Outer border
-  ctx.strokeStyle = 'rgba(103,186,244,.4)';
-  ctx.lineWidth = 6;
-  ctx.strokeRect(18,18,sz-36,sz-36);
+  const blue = '#67BAF4';
+  const blueDim = 'rgba(103,186,244,.25)';
 
-  // Inner thin border
-  ctx.strokeStyle = 'rgba(103,186,244,.15)';
-  ctx.lineWidth = 2;
-  ctx.strokeRect(28,28,sz-56,sz-56);
+  // ── ASCENDING CHART SYMBOL ──
+  // Three bars rising left to right (evolution / growth)
+  const barW = 62;
+  const gap = 28;
+  const baseY = 340;
+  const bars = [
+    { x: 118, h: 100 },  // short
+    { x: 118 + barW + gap, h: 180 }, // medium
+    { x: 118 + (barW + gap)*2, h: 260 }, // tall
+  ];
 
-  // "LV" text top small
-  ctx.font = '500 52px "Share Tech Mono", monospace';
-  ctx.fillStyle = 'rgba(103,186,244,.5)';
-  ctx.textAlign = 'center';
-  ctx.fillText('PLAYER SYSTEM', sz/2, 120);
+  // Draw bars
+  bars.forEach(b => {
+    ctx.fillStyle = blue;
+    ctx.fillRect(b.x, baseY - b.h, barW, b.h);
+  });
 
-  // Big "P" letter
-  ctx.font = 'bold 280px "Rajdhani", sans-serif';
-  ctx.fillStyle = '#67BAF4';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText('P', sz/2, sz/2 + 20);
+  // Upward arrow above tallest bar
+  const arrowX = bars[2].x + barW/2;
+  const arrowBaseY = baseY - bars[2].h - 22;
+  const arrowH = 90;
+  const arrowW = 44;
 
-  // Bottom label
-  ctx.font = '400 44px "Share Tech Mono", monospace';
-  ctx.fillStyle = 'rgba(103,186,244,.55)';
-  ctx.textBaseline = 'alphabetic';
-  ctx.fillText('SYSTEM', sz/2, sz - 80);
+  ctx.fillStyle = blue;
+  ctx.beginPath();
+  // Arrow head (triangle)
+  ctx.moveTo(arrowX, arrowBaseY - arrowH);         // tip
+  ctx.lineTo(arrowX - arrowW, arrowBaseY - arrowH/2); // left
+  ctx.lineTo(arrowX - arrowW/2.2, arrowBaseY - arrowH/2); // inner left
+  ctx.lineTo(arrowX - arrowW/2.2, arrowBaseY);        // stem bottom left
+  ctx.lineTo(arrowX + arrowW/2.2, arrowBaseY);        // stem bottom right
+  ctx.lineTo(arrowX + arrowW/2.2, arrowBaseY - arrowH/2); // inner right
+  ctx.lineTo(arrowX + arrowW, arrowBaseY - arrowH/2); // right
+  ctx.closePath();
+  ctx.fill();
 
-  // Horizontal line accents
-  ctx.strokeStyle = 'rgba(103,186,244,.3)';
-  ctx.lineWidth = 2;
-  ctx.beginPath();ctx.moveTo(60,160);ctx.lineTo(sz-60,160);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(60,sz-130);ctx.lineTo(sz-60,sz-130);ctx.stroke();
+  // Thin horizontal baseline
+  ctx.strokeStyle = blueDim;
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(90, baseY + 12);
+  ctx.lineTo(sz - 90, baseY + 12);
+  ctx.stroke();
+
+  // Four tiny tick marks on baseline
+  [118, 118+barW+gap, 118+(barW+gap)*2, 118+(barW+gap)*2+barW].forEach(tx => {
+    ctx.beginPath();
+    ctx.moveTo(tx + barW/2, baseY + 12);
+    ctx.lineTo(tx + barW/2, baseY + 26);
+    ctx.strokeStyle = blueDim;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  });
 
   const iconUrl = cv.toDataURL('image/png');
 
